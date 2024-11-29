@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <button onclick="setItem()">SetItem</button>
+     <button onclick="getItem()"></button>
+     <p id="demo"></p>
+      <script>
+        const output = document.getElementById('demo');
+            function setItem() {  
+                const animal = {
+                       name: "Lion",
+                       color: "Yellow",
+                       food: "Non-vegetarian",
+                }
+                  localStorage.setItem("animal", JSON.stringify(animal));
+      
+           }
+           function getItem(){
+              const animal = localStorage.getItem('animal');
+              output.innerHTML = "The animal object is: " + animal;
+           }
+      </script>
+</body>
+</html>
